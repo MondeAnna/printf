@@ -5,8 +5,14 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-int _strlen(char *str);
+/* digit printers */
+int print_int(int num);
+
+/* alphabet printers*/
 int print_char(char c);
 int print_str(char *str);
+
+/* utilities*/
+int _strlen(char *str);
 
 #endif  /* MAIN_H */
