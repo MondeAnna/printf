@@ -69,3 +69,44 @@ int print_unsigned_int(unsigned int num)
 
 	return (write(descriptor, &digit, len) + count);
 }
+
+/**
+ * print_hex - prints integer as hex
+ * @specifier: hex casing
+ * @num: unsigned integer
+ *
+ * Return: hex char count (int)
+ */
+int print_hex(const char specifier, int num)
+{
+	int descriptor = 1;
+	int len = 1;
+
+	int base = 16;
+	int count = 0;
+
+	char hex_start;
+	char digit;
+
+	if (num < 0)
+	{
+		count += write(descriptor, "-", len);
+		num = -num;
+	}
+
+	if (num >= base)
+		count += print_hex(specifier, num / base);
+
+	num %= base;
+
+	if (num <= 10)
+	{
+		digit = '0' + num;
+		return (write(descriptor, &digit, len) + count);
+	}
+
+	hex_start = specifier == 'x' ? 'a' : 'A';
+	digit = hex_start + (num % 10);
+
+	return (write(descriptor, &digit, len) + count);
+}

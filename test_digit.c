@@ -85,3 +85,32 @@ void test_print_bin(void)
 	assert(print_bin(37) == 6);
 	print_char('\n');
 }
+
+/**
+ * test_print_hex - test case for unsigned int
+ * printer
+ * Return: void
+ */
+void test_print_hex(void)
+{
+	/* print out of zero to be zero */
+	assert(print_hex('x', 0) == 1);
+	print_char('\n');
+
+	/* expected printout: b */
+	assert(print_hex('x', 11) == 1);
+	print_char('\n');
+
+	/* expected printout: F */
+	assert(print_hex('X', 15) == 1);
+	print_char('\n');
+
+	/* expected printout: 10 */
+	assert(print_hex('x', 16) == 2);
+	print_char('\n');
+
+	/* expected printout: B5B */
+	assert(print_hex('X', 2907) == 3);
+	print_char('\n');
+}
+

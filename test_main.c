@@ -11,6 +11,7 @@ int main(void)
 	test_print_int();
 	test_print_unsigned_int();
 	test_print_bin();
+	test_print_hex();
 
 	return (EXIT_SUCCESS);
 }
