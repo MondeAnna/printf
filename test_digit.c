@@ -1,27 +1,6 @@
 #include "main.h"
 
 /**
- * test_print_char - test cases for char printer
- * Return: void
- */
-void test_print_char(void)
-{
-	char *chars = "! a5~\n";
-
-	while (*chars)
-		assert(print_char(*chars++) == 1);
-}
-
-/**
- * test_print_str - test case for str printer
- * Return: void
- */
-void test_print_str(void)
-{
-	assert(print_str("these\n") == 6);
-}
-
-/**
  * test_print_int - test case for int printer
  * Return: void
  */
@@ -105,19 +84,4 @@ void test_print_bin(void)
 	/* expected printout: 100101 */
 	assert(print_bin(37) == 6);
 	print_char('\n');
-}
-
-/**
- * main - entry point
- * Return: EXIT_SUCCESS
- */
-int main(void)
-{
-	test_print_char();
-	test_print_str();
-	test_print_int();
-	test_print_unsigned_int();
-	test_print_bin();
-
-	return (EXIT_SUCCESS);
 }
