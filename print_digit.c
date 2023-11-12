@@ -110,3 +110,41 @@ int print_hex(const char specifier, int num)
 
 	return (write(descriptor, &digit, len) + count);
 }
+
+/**
+ * print_oct - prints integer as hex
+ * @num: unsigned integer
+ *
+ * Return: hex char count (int)
+ */
+int print_oct(int num)
+{
+	int descriptor = 1;
+	int len = 1;
+
+	int base = 8;
+	int count = 0;
+
+	char digit;
+
+	if (num < 0)
+	{
+		count += write(descriptor, "-", len);
+		num = -num;
+	}
+
+	if (num >= base)
+		count += print_oct(num / base);
+
+	num %= base;
+
+	if (num <= base)
+	{
+		digit = '0' + num;
+		return (write(descriptor, &digit, len) + count);
+	}
+
+	digit = (num % base);
+
+	return (write(descriptor, &digit, len) + count);
+}

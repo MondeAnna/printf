@@ -10,6 +10,7 @@ int print_bin(int num);
 int print_int(int num);
 int print_unsigned_int(unsigned int num);
 int print_hex(const char specifier, int num);
+int print_oct(int num);
 
 /* alphabet printers*/
 int print_char(char c);

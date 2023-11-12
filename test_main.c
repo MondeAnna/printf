@@ -12,6 +12,7 @@ int main(void)
 	test_print_unsigned_int();
 	test_print_bin();
 	test_print_hex();
+	test_print_oct();
 
 	return (EXIT_SUCCESS);
 }

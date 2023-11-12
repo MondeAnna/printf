@@ -8,6 +8,7 @@ void test_print_bin(void);
 void test_print_int(void);
 void test_print_unsigned_int(void);
 void test_print_hex(void);
+void test_print_oct(void);
 
 /* test alphabets */
 void test_print_char(void);

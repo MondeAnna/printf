@@ -114,3 +114,26 @@ void test_print_hex(void)
 	print_char('\n');
 }
 
+/**
+ * test_print_oct - test case for unsigned int
+ * printer
+ * Return: void
+ */
+void test_print_oct(void)
+{
+	/* print out of zero to be zero */
+	assert(print_oct(0) == 1);
+	print_char('\n');
+
+	/* expected printout: 7 */
+	assert(print_oct(7) == 1);
+	print_char('\n');
+
+	/* expected printout: 17 */
+	assert(print_oct(15) == 2);
+	print_char('\n');
+
+	/* expected printout: 1172 */
+	assert(print_oct(635) == 4);
+	print_char('\n');
+}
