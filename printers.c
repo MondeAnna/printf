@@ -49,6 +49,28 @@ int print_int(int num)
 }
 
 /**
+ * print_unsigned_int - prints unsigned integer
+ * @num: unsigned integer
+ * Return: integer char count (int)
+ */
+int print_unsigned_int(unsigned int num)
+{
+	const unsigned int base = 10;
+	const int descriptor = 1;
+	const int len = 1;
+
+	int count = 0;
+	char digit;
+
+	if (num >= base)
+		count += print_unsigned_int(num / base);
+
+	digit = '0' + (num % base);
+
+	return (write(descriptor, &digit, len) + count);
+}
+
+/**
  * print_char - char printer
  * @c: char being printed
  * Return: one on success, else zero (int)

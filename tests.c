@@ -45,6 +45,22 @@ void test_print_int(void)
 }
 
 /**
+ * test_print_unsigned_int - test case for unsigned int
+ * printer
+ * Return: void
+ */
+void test_print_unsigned_int(void)
+{
+	/* print out of zero to be zero */
+	assert(print_unsigned_int(0) == 1);
+	print_char('\n');
+
+	/* print out of 0 < n < 10 to be one char*/
+	assert(print_unsigned_int(4294967295) == 10);
+	print_char('\n');
+}
+
+/**
  * test_print_bin - test case for binary printer
  * Return: void
  */
@@ -100,6 +116,7 @@ int main(void)
 	test_print_char();
 	test_print_str();
 	test_print_int();
+	test_print_unsigned_int();
 	test_print_bin();
 
 	return (EXIT_SUCCESS);

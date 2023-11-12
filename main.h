@@ -8,6 +8,7 @@
 /* digit printers */
 int print_bin(int num);
 int print_int(int num);
+int print_unsigned_int(unsigned int num);
 
 /* alphabet printers*/
 int print_char(char c);
