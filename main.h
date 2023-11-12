@@ -31,7 +31,7 @@ int print_oct(int num);
 
 /* alphabet printers*/
 int print_char(char c);
-int print_str(char *str);
+int print_str(va_list args);
 
 /* utilities*/
 int _strlen(char *str);

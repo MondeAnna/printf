@@ -15,13 +15,18 @@ int print_char(char c)
 
 /**
  * print_str - str printer
- * @str: str being printed
+ * @args: va list with str being printed
  * Return: num of byte printed (int)
  */
-int print_str(char *str)
+int print_str(va_list args)
 {
-	int len = _strlen(str);
 	int descriptor = 1;
+	char *str;
+	int len;
+
+	str = va_arg(args, char *);
+
+	len = _strlen(str);
 
 	return (write(descriptor, str, len));
 }

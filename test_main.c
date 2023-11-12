@@ -8,7 +8,6 @@ int main(void)
 {
 	/* alphabet */
 	test_print_char();
-	test_print_str();
 
 	/* digits: base 10 */
 	test_print_int();
@@ -21,6 +20,7 @@ int main(void)
 
 	/* _printf */
 	test_printf_no_spec();
+	test_printf_s_spec();
 
 	return (EXIT_SUCCESS);
 }
