@@ -1,5 +1,5 @@
-#ifndef TEST_MAIN
-#define TEST_MAIN
+#ifndef TEST_MAIN_H
+#define TEST_MAIN_H
 
 #include "main.h"
 
@@ -14,4 +14,7 @@ void test_print_oct(void);
 void test_print_char(void);
 void test_print_str(void);
 
-#endif /* TEST_MAIN */
+/* primary focus  */
+void test_printf_no_spec(void);
+
+#endif /* TEST_MAIN_H */

@@ -1,4 +1,4 @@
-#include "main.h"
+#include "test_main.h"
 
 /**
  * test_print_int - test case for int printer
