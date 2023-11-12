@@ -45,6 +45,53 @@ void test_print_int(void)
 }
 
 /**
+ * test_print_bin - test case for binary printer
+ * Return: void
+ */
+void test_print_bin(void)
+{
+	/* expected printout: 0 */
+	assert(print_bin(0) == 1);
+	print_char('\n');
+
+	/* expected printout: 1 */
+	assert(print_bin(1) == 1);
+	print_char('\n');
+
+	/* expected printout: 10 */
+	assert(print_bin(2) == 2);
+	print_char('\n');
+
+	/* expected printout: 11 */
+	assert(print_bin(3) == 2);
+	print_char('\n');
+
+	/* expected printout: 100 */
+	assert(print_bin(4) == 3);
+	print_char('\n');
+
+	/* expected printout: 111 */
+	assert(print_bin(7) == 3);
+	print_char('\n');
+
+	/* expected printout: 1000 */
+	assert(print_bin(8) == 4);
+	print_char('\n');
+
+	/* expected printout: 1010 */
+	assert(print_bin(10) == 4);
+	print_char('\n');
+
+	/* expected printout: 100000 */
+	assert(print_bin(32) == 6);
+	print_char('\n');
+
+	/* expected printout: 100101 */
+	assert(print_bin(37) == 6);
+	print_char('\n');
+}
+
+/**
  * main - entry point
  * Return: EXIT_SUCCESS
  */
@@ -53,6 +100,7 @@ int main(void)
 	test_print_char();
 	test_print_str();
 	test_print_int();
+	test_print_bin();
 
 	return (EXIT_SUCCESS);
 }

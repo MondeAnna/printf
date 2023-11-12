@@ -1,6 +1,24 @@
 #include "main.h"
 
 /**
+ * print_bin - prints binary digits
+ * @num: num being printed
+ * Return: num of digits int bin value (int)
+ */
+int print_bin(int num)
+{
+	int count = 0;
+	char digit;
+
+	if (num >> 1 >= 1)
+		count += print_bin(num >> 1);
+
+	digit = (num & 1) ? '1' : '0';
+
+	return (write(1, &digit, 1) + count);
+}
+
+/**
  * print_int - prints integer
  * @num: integer
  *

@@ -6,6 +6,7 @@
 #include <unistd.h>
 
 /* digit printers */
+int print_bin(int num);
 int print_int(int num);
 
 /* alphabet printers*/
