@@ -15,6 +15,7 @@ int main(void)
 	/* digits */
 	test_printf_b_spec();
 	test_printf_x_lower_spec();
+	test_printf_x_upper_spec();
 
 	return (EXIT_SUCCESS);
 }

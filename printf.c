@@ -67,6 +67,8 @@ int _printf(const char *format, ...)
 			count += print_bin(args);
 		else if (*str == 'x')
 			count += print_hex_lower(args);
+		else if (*str == 'X')
+			count += print_hex_upper(args);
 
 		str++;
 	}

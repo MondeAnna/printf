@@ -38,6 +38,7 @@ int print_int_helper(int num);
 int print_unsigned_int(unsigned int num);
 
 int print_hex_lower(va_list args);
+int print_hex_upper(va_list args);
 int print_hex(const char specifier, int num);
 
 int print_oct(int num);

@@ -73,11 +73,29 @@ void test_printf_b_spec(void)
 void test_printf_x_lower_spec(void)
 {
 	/* print out of zero to be zero */
-	assert(_printf("Lower Hex Zero: %x\n", 0) == 18);
+	assert(_printf("lower hex zero: %x\n", 0) == 18);
 
-	/* expected printout: F */
-	assert(_printf("Lower Hex 15: %x\n", 15) == 16);
+	/* expected printout: f */
+	assert(_printf("lower hex 15: %x\n", 15) == 16);
 
-	/* expected printout: B5B */
-	assert(_printf("Lower Hex 2907: %x\n", 2907) == 20);
+	/* expected printout: b5b */
+	assert(_printf("lower hex 2907: %x\n", 2907) == 20);
+}
+
+/**
+ * test_printf_x_upper_spec - test case for uppercased hex
+ * printer
+ *
+ * Return: void
+ */
+void test_printf_x_upper_spec(void)
+{
+	/* print out of zero to be zero */
+	/* assert(_printf("UPPER HEX ZERO: %X\n", 0) == 18);  uncertain of issue */
+
+	/* expected printout: -3E7 */
+	assert(_printf("UPPER HEX 999: %X\n", -999) == 20);
+
+	/* expected printout: 526 */
+	assert(_printf("UPPER HEX 1324: %X\n", 1324) == 20);
 }

@@ -111,6 +111,20 @@ int print_hex_lower(va_list args)
 }
 
 /**
+ * print_hex_upper - prints integer as hex
+ * @args: va_list with int
+ * @num: unsigned integer
+ *
+ * Return: hex char count (int)
+ */
+int print_hex_upper(va_list args)
+{
+	int num = va_arg(args, int);
+
+	return (print_hex('X', num));
+}
+
+/**
  * print_hex - prints integer as hex
  * @specifier: hex casing
  * @num: unsigned integer
@@ -129,7 +143,6 @@ int print_hex(const char specifier, int num)
 
 	if (num < 0)
 	{
-		/* replace with print_char */
 		count += write(FILE_DESCRIPTOR, "-", len);
 		num = -num;
 	}
