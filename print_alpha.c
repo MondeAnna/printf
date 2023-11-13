@@ -2,15 +2,31 @@
 
 /**
  * print_char - char printer
- * @c: char being printed
+ * @args: va list with char being printed
  * Return: one on success, else zero (int)
  */
-int print_char(char c)
+int print_char(va_list args)
 {
 	int descriptor = 1;
 	int len = 1;
+	char c;
+
+	c = va_arg(args, int);
 
 	return (write(descriptor, &c, len));
+}
+
+/**
+ * print_format - format printer
+ * @str: format str being printed
+ * @len: portion of format string to print
+ * Return: num of byte printed (int)
+ */
+int print_format(char *str, int len)
+{
+	int descriptor = 1;
+
+	return (write(descriptor, str, len));
 }
 
 /**

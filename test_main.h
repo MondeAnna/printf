@@ -16,5 +16,6 @@ void test_print_char(void);
 /* primary focus  */
 void test_printf_no_spec(void);
 void test_printf_s_spec(void);
+void test_printf_c_spec(void);
 
 #endif /* TEST_MAIN_H */

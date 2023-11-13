@@ -10,6 +10,15 @@ void test_printf_no_spec(void)
 }
 
 /**
+ * test_printf_c_spec - c specifier in format
+ * Return: void
+ */
+void test_printf_c_spec(void)
+{
+	assert(_printf("I am ME%c\n", '!') == 9);
+}
+
+/**
  * test_printf_s_spec - s specifier in format
  * Return: void
  */
