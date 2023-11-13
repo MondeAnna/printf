@@ -65,6 +65,8 @@ int _printf(const char *format, ...)
 			count += print_str(args);
 		else if (*str == 'b')
 			count += print_bin(args);
+		else if (*str == 'x')
+			count += print_hex_lower(args);
 
 		str++;
 	}

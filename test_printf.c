@@ -63,3 +63,21 @@ void test_printf_b_spec(void)
 	/* expected printout: 100101 */
 	assert(_printf("Bin 37: %b\n", 37) == 15);
 }
+
+/**
+ * test_printf_x_lower_spec - test case for lowercased hex
+ * printer
+ *
+ * Return: void
+ */
+void test_printf_x_lower_spec(void)
+{
+	/* print out of zero to be zero */
+	assert(_printf("Lower Hex Zero: %x\n", 0) == 18);
+
+	/* expected printout: F */
+	assert(_printf("Lower Hex 15: %x\n", 15) == 16);
+
+	/* expected printout: B5B */
+	assert(_printf("Lower Hex 2907: %x\n", 2907) == 20);
+}

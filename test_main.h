@@ -6,10 +6,10 @@
 /* test digits */
 void test_printf_i_d_spec(void);
 void test_printf_b_spec(void);
+void test_printf_x_lower_spec(void);
 
 void test_print_int(void);
 void test_print_unsigned_int(void);
-void test_print_hex(void);
 void test_print_oct(void);
 
 /* test alphabets */

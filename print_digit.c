@@ -97,6 +97,20 @@ int print_unsigned_int(unsigned int num)
 }
 
 /**
+ * print_hex_lower - prints integer as hex
+ * @args: va_list with int
+ * @num: unsigned integer
+ *
+ * Return: hex char count (int)
+ */
+int print_hex_lower(va_list args)
+{
+	int num = va_arg(args, int);
+
+	return (print_hex('x', num));
+}
+
+/**
  * print_hex - prints integer as hex
  * @specifier: hex casing
  * @num: unsigned integer
