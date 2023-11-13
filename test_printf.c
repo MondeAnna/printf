@@ -65,6 +65,23 @@ void test_printf_b_spec(void)
 }
 
 /**
+ * test_printf_o_spec - test case for ocal printer
+ *
+ * Return: void
+ */
+void test_printf_o_spec(void)
+{
+	/* print out of zero to be zero */
+	assert(_printf("Octal zero: %o\n", 0) == 14);
+
+	/* expected printout: -7 */
+	assert(_printf("Octal -7: %o\n", -7) == 13);
+
+	/* expected printout: 1172 */
+	assert(_printf("Octal 635: %o\n", 635) == 16);
+}
+
+/**
  * test_printf_x_lower_spec - test case for lowercased hex
  * printer
  *
@@ -99,3 +116,4 @@ void test_printf_x_upper_spec(void)
 	/* expected printout: 526 */
 	assert(_printf("UPPER HEX 1324: %X\n", 1324) == 20);
 }
+

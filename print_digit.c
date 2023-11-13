@@ -166,11 +166,24 @@ int print_hex(const char specifier, int num)
 
 /**
  * print_oct - prints integer as hex
+ * @args: va list containing int
+ *
+ * Return: hex char count (int)
+ */
+int print_oct(va_list args)
+{
+	int num = va_arg(args, int);
+
+	return (print_oct_helper(num));
+}
+
+/**
+ * print_oct - prints integer as hex
  * @num: unsigned integer
  *
  * Return: hex char count (int)
  */
-int print_oct(int num)
+int print_oct_helper(int num)
 {
 	int len = 1;
 
@@ -187,7 +200,7 @@ int print_oct(int num)
 	}
 
 	if (num >= base)
-		count += print_oct(num / base);
+		count += print_oct_helper(num / base);
 
 	num %= base;
 

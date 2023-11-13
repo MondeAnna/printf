@@ -41,7 +41,8 @@ int print_hex_lower(va_list args);
 int print_hex_upper(va_list args);
 int print_hex(const char specifier, int num);
 
-int print_oct(int num);
+int print_oct(va_list args);
+int print_oct_helper(int num);
 
 /* alphabet printers*/
 int print_char(va_list args);

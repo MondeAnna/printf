@@ -69,6 +69,8 @@ int _printf(const char *format, ...)
 			count += print_hex_lower(args);
 		else if (*str == 'X')
 			count += print_hex_upper(args);
+		else if (*str == 'o')
+			count += print_oct(args);
 
 		str++;
 	}
