@@ -10,6 +10,7 @@ int main(void)
 	test_printf_no_spec();
 	test_printf_c_spec();
 	test_printf_s_spec();
+	test_printf_b_spec();
 
 	return (EXIT_SUCCESS);
 }

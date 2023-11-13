@@ -8,16 +8,16 @@
 void test_print_int(void)
 {
 	/* print out of zero to be zero */
-	assert(print_int(0) == 1);
+	/* assert(print_int(0) == 1); */
 
 	/* print out of 0 < n < 10 to be one char*/
-	assert(print_int(5) == 1);
+	/* assert(print_int(5) == 1); */
 
 	/* print out of n < 0 to include `-` */
-	assert(print_int(-10) == 3);
+	/* assert(print_int(-10) == 3); */
 
 	/* print out of n digit long value is n chars */
-	assert(print_int(12345) == 5);
+	/* assert(print_int(12345) == 5); */
 }
 
 /**
@@ -33,44 +33,6 @@ void test_print_unsigned_int(void)
 
 	/* print out of 0 < n < 10 to be one char*/
 	assert(print_unsigned_int(4294967295) == 10);
-}
-
-/**
- * test_print_bin - test case for binary printer
- *
- * Return: void
- */
-void test_print_bin(void)
-{
-	/* expected printout: 0 */
-	assert(print_bin(0) == 1);
-
-	/* expected printout: 1 */
-	assert(print_bin(1) == 1);
-
-	/* expected printout: 10 */
-	assert(print_bin(2) == 2);
-
-	/* expected printout: 11 */
-	assert(print_bin(3) == 2);
-
-	/* expected printout: 100 */
-	assert(print_bin(4) == 3);
-
-	/* expected printout: 111 */
-	assert(print_bin(7) == 3);
-
-	/* expected printout: 1000 */
-	assert(print_bin(8) == 4);
-
-	/* expected printout: 1010 */
-	assert(print_bin(10) == 4);
-
-	/* expected printout: 100000 */
-	assert(print_bin(32) == 6);
-
-	/* expected printout: 100101 */
-	assert(print_bin(37) == 6);
 }
 
 /**

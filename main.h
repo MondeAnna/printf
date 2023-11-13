@@ -29,8 +29,10 @@ int _printf(const char *format, ...);
 int (*get_printer(char *spec))(va_list args);
 
 /* digit printers */
-int print_bin(int num);
-int print_int(int num);
+int print_bin(va_list args);
+int print_bin_helper(int num);
+int print_int(va_list args);
+int print_int_helper(int num);
 int print_unsigned_int(unsigned int num);
 int print_hex(const char specifier, int num);
 int print_oct(int num);

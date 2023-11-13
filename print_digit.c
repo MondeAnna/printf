@@ -2,17 +2,29 @@
 
 /**
  * print_bin - prints binary digits
+ * @args: va list with num being printed
+ *
+ * Return: num of digits int bin value (int)
+ */
+int print_bin(va_list args)
+{
+	int num = va_arg(args, int);
+
+	return (print_bin_helper(num));
+}
+/**
+ * print_bin_helper - helper to bin digit printer
  * @num: num being printed
  *
  * Return: num of digits int bin value (int)
  */
-int print_bin(int num)
+int print_bin_helper(int num)
 {
 	int count = 0;
 	char digit;
 
 	if (num >> 1 >= 1)
-		count += print_bin(num >> 1);
+		count += print_bin_helper(num >> 1);
 
 	digit = (num & 1) ? '1' : '0';
 
@@ -21,11 +33,24 @@ int print_bin(int num)
 
 /**
  * print_int - prints integer
- * @num: integer
+ * @args: va_list containing int
  *
  * Return: integer char count (int)
  */
-int print_int(int num)
+int print_int(va_list args)
+{
+	int num = va_arg(args, int);
+
+	return (print_int_helper(num));
+}
+
+/**
+ * print_int_helper - prints integer
+ * @num: int being printed
+ *
+ * Return: integer char count (int)
+ */
+int print_int_helper(int num)
 {
 	int len = 1;
 
@@ -42,7 +67,7 @@ int print_int(int num)
 	}
 
 	if (num >= base)
-		count += print_int(num / base);
+		count += print_int_helper(num / base);
 
 	digit = '0' + (num % base);
 

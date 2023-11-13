@@ -61,8 +61,10 @@ int _printf(const char *format, ...)
 
 		if (*str == 'c')
 			count += print_char(args);
-		else
+		else if (*str == 's')
 			count += print_str(args);
+		else if (*str == 'b')
+			count += print_bin(args);
 
 		str++;
 	}
