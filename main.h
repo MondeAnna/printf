@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#define FILE_DESCRIPTOR 1
 #define TRUE 1
 
 #include <assert.h>

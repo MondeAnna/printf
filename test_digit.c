@@ -2,6 +2,7 @@
 
 /**
  * test_print_int - test case for int printer
+ *
  * Return: void
  */
 void test_print_int(void)
@@ -22,6 +23,7 @@ void test_print_int(void)
 /**
  * test_print_unsigned_int - test case for unsigned int
  * printer
+ *
  * Return: void
  */
 void test_print_unsigned_int(void)
@@ -35,6 +37,7 @@ void test_print_unsigned_int(void)
 
 /**
  * test_print_bin - test case for binary printer
+ *
  * Return: void
  */
 void test_print_bin(void)
@@ -73,6 +76,7 @@ void test_print_bin(void)
 /**
  * test_print_hex - test case for unsigned int
  * printer
+ *
  * Return: void
  */
 void test_print_hex(void)
@@ -96,6 +100,7 @@ void test_print_hex(void)
 /**
  * test_print_oct - test case for unsigned int
  * printer
+ *
  * Return: void
  */
 void test_print_oct(void)

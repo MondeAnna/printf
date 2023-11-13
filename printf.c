@@ -3,6 +3,7 @@
 /**
  * get_printer - select printer variation
  * @spec: specifier
+ *
  * Return: pointer to printer
  */
 int (*get_printer(char *spec))(va_list args)
@@ -29,6 +30,7 @@ int (*get_printer(char *spec))(va_list args)
 /**
  * _printf - print formatted string
  * @format: str format
+ *
  * Return: num of bytes printed (int)
  */
 int _printf(const char *format, ...)

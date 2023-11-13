@@ -2,6 +2,7 @@
 
 /**
  * main - test entry point
+ *
  * Return: EXIT_SUCCESS
  */
 int main(void)

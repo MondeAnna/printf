@@ -26,7 +26,9 @@ int _strcmp(char *s1, char *s2)
 
 /**
  * _strlen - char count of str
+ *
  * @str: str being measured
+ *
  * Return: num of bytes up to first null
  * byte char of str (int)
  */
@@ -39,7 +41,9 @@ int _strlen(char *str)
 
 /**
  * _strlen_desc - char count of str to next descriptor
+ *
  * @str: str being measured
+ *
  * Return: num of bytes up to first null
  * byte char of str to descriptor(int)
  */

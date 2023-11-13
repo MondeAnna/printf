@@ -3,6 +3,7 @@
 /**
  * print_bin - prints binary digits
  * @num: num being printed
+ *
  * Return: num of digits int bin value (int)
  */
 int print_bin(int num)
@@ -15,7 +16,7 @@ int print_bin(int num)
 
 	digit = (num & 1) ? '1' : '0';
 
-	return (write(1, &digit, 1) + count);
+	return (write(FILE_DESCRIPTOR, &digit, 1) + count);
 }
 
 /**
@@ -26,7 +27,6 @@ int print_bin(int num)
  */
 int print_int(int num)
 {
-	int descriptor = 1;
 	int len = 1;
 
 	int base = 10;
@@ -36,7 +36,8 @@ int print_int(int num)
 
 	if (num < 0)
 	{
-		count += write(descriptor, "-", len);
+		/* replace with print_char */
+		count += write(FILE_DESCRIPTOR, "-", len);
 		num = -num;
 	}
 
@@ -45,18 +46,18 @@ int print_int(int num)
 
 	digit = '0' + (num % base);
 
-	return (write(descriptor, &digit, len) + count);
+	return (write(FILE_DESCRIPTOR, &digit, len) + count);
 }
 
 /**
  * print_unsigned_int - prints unsigned integer
  * @num: unsigned integer
+ *
  * Return: integer char count (int)
  */
 int print_unsigned_int(unsigned int num)
 {
 	const unsigned int base = 10;
-	const int descriptor = 1;
 	const int len = 1;
 
 	int count = 0;
@@ -67,7 +68,7 @@ int print_unsigned_int(unsigned int num)
 
 	digit = '0' + (num % base);
 
-	return (write(descriptor, &digit, len) + count);
+	return (write(FILE_DESCRIPTOR, &digit, len) + count);
 }
 
 /**
@@ -79,7 +80,6 @@ int print_unsigned_int(unsigned int num)
  */
 int print_hex(const char specifier, int num)
 {
-	int descriptor = 1;
 	int len = 1;
 
 	int base = 16;
@@ -90,7 +90,8 @@ int print_hex(const char specifier, int num)
 
 	if (num < 0)
 	{
-		count += write(descriptor, "-", len);
+		/* replace with print_char */
+		count += write(FILE_DESCRIPTOR, "-", len);
 		num = -num;
 	}
 
@@ -102,13 +103,13 @@ int print_hex(const char specifier, int num)
 	if (num <= 10)
 	{
 		digit = '0' + num;
-		return (write(descriptor, &digit, len) + count);
+		return (write(FILE_DESCRIPTOR, &digit, len) + count);
 	}
 
 	hex_start = specifier == 'x' ? 'a' : 'A';
 	digit = hex_start + (num % 10);
 
-	return (write(descriptor, &digit, len) + count);
+	return (write(FILE_DESCRIPTOR, &digit, len) + count);
 }
 
 /**
@@ -119,7 +120,6 @@ int print_hex(const char specifier, int num)
  */
 int print_oct(int num)
 {
-	int descriptor = 1;
 	int len = 1;
 
 	int base = 8;
@@ -129,7 +129,8 @@ int print_oct(int num)
 
 	if (num < 0)
 	{
-		count += write(descriptor, "-", len);
+		/* replace with print_char */
+		count += write(FILE_DESCRIPTOR, "-", len);
 		num = -num;
 	}
 
@@ -141,10 +142,10 @@ int print_oct(int num)
 	if (num <= base)
 	{
 		digit = '0' + num;
-		return (write(descriptor, &digit, len) + count);
+		return (write(FILE_DESCRIPTOR, &digit, len) + count);
 	}
 
 	digit = (num % base);
 
-	return (write(descriptor, &digit, len) + count);
+	return (write(FILE_DESCRIPTOR, &digit, len) + count);
 }
